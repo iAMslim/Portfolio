@@ -1,11 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Charles Hammonds | Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      body {
+        background: linear-gradient(
+          180deg,
+          #090c0b 0%,
+          #101714 45%,
+          #18211c 100%
+        );
+        color: #f5f5f5;
+      }
+
+      .hero-highlight {
+        background: linear-gradient(135deg, #111814, #1d2822);
+        color: #f5f5f5;
+        padding: 2.25rem;
+        border-radius: 2rem;
+        border: 1px solid rgba(194, 166, 98, 0.22);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+      }
+
+      .hero-highlight .section__text__p1,
+      .hero-highlight .section__text__p2,
+      .hero-highlight .title {
+        color: #f8f6f1;
+      }
+
+      .hero-highlight .section__text__p2 {
+        opacity: 0.9;
+      }
+
+      .about-summary,
+      .project-summary,
+      .experience-note,
+      .text-container p,
+      .details-container p,
+      .contact-info-container p,
+      footer p {
+        color: #d3dbd5;
+      }
+
+      .details-container,
+      .color-container,
+      .contact-info-upper-container {
+        background: rgba(18, 24, 20, 0.92);
+        border: 1px solid rgba(194, 166, 98, 0.22);
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+      }
+
+      .section-container {
+        align-items: center;
+      }
+
+      .title,
+      .experience-sub-title,
+      .project-title,
+      h3 {
+        color: #f5f1e8;
+      }
+
+      .section__text__p1 {
+        color: #c2a662;
+        letter-spacing: 0.08rem;
+        text-transform: uppercase;
+      }
+
+      .btn-color-1 {
+        background: #c2a662;
+        color: #101512;
+        border: 2px solid #c2a662;
+      }
+
+      .btn-color-1:hover {
+        background: #af934f;
+        border-color: #af934f;
+        color: #101512;
+      }
+
+      .btn-color-2 {
+        border: 2px solid #c2a662;
+        color: #f5f1e8;
+        background: transparent;
+      }
+
+      .btn-color-2:hover {
+        background: #c2a662;
+        color: #101512;
+      }
+
+      .project-title {
+        color: #d6bc81;
+      }
+
+      .project-description {
+        margin: 1rem 0;
+        color: #cfd7d1;
+        min-height: 72px;
+      }
+
+      footer p {
+        color: #aab5ae;
+      }
+    </style>
   </head>
   <body>
     <nav id="desktop-nav">
@@ -13,14 +115,16 @@
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#experince">Experience</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="capstone.html">Capstone</a></li>
         </ul>
       </div>
     </nav>
+
     <nav id="hamburger-nav">
-      <div class="logo">Slim</div>
+      <div class="logo">Charles H</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -32,350 +136,455 @@
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="capstone.html" onclick="toggleMenu()">Capstone</a></li>
         </div>
       </div>
     </nav>
+
     <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="./assets/images/ED3A9010.jpg"
+          alt="Charles Hammonds profile picture"
+          class="profile-pic"
+        />
+      </div>
+
+      <div class="section__text hero-highlight">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Charles Hammonds Jr.</h1>
+        <p class="section__text__p2">
+          Software Engineer | Full-Stack Developer
+        </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/docs/Tech resume.docx')"
+          >
+            Download Resume
+          </button>
+          <button
+            class="btn btn-color-1"
+            onclick="location.href = './#contact'"
+          >
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/icons/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href = 'https://www.linkedin.com/in/chammondsjr/'"
+          />
+          <img
+            src="./assets/icons/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href = 'https://github.com/iAMslim'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
         <div class="section__pic-container">
-          <img src="./assets/ED3A9010.jpg" alt="John Doe profile picture" />
+          <img
+            src="./assets/images/mabb103u.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
         </div>
-        <div class="section__text">
-          <p class="section__text__p1">Hello, I'm</p>
-          <h1 class="title">Charles Hammonds JR</h1>
-          <p class="section__text__p2">Full-Stack Developer</p>
-          <div class="btn-container">
-            <button
-              class="btn btn-color-2"
-              onclick="window.open('./assets/Tech resume.docx')"
-            >
-              Download CV
-            </button>
-            <button class="btn btn-color-1" onclick="location.href='./#contact'">
-              Contact Info
-            </button>
+
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/icons/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Focus</h3>
+              <p>Full-Stack Development<br />Software Engineering</p>
+            </div>
+
+            <div class="details-container">
+              <img
+                src="./assets/icons/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.S. in Computer Science<br />SNHU</p>
+            </div>
           </div>
-          <div id="socials-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="My LinkedIn profile"
-              class="icon"
-              onclick="location.href='https://www.linkedin.com/in/chammondsjr/'"
-            />
-            <img
-              src="./assets/github.png"
-              alt="My Github profile"
-              class="icon"
-              onclick="location.href='https://github.com/iAMslim'"
-            />
+
+          <div class="text-container">
+            <p class="about-summary">
+              I am a computer science student and aspiring software engineer
+              with a growing focus on full-stack development. My background in
+              coaching, training, and leadership helped me develop strong
+              communication, problem-solving, and adaptability skills, which now
+              carry directly into software development. I enjoy building
+              practical applications, improving systems through thoughtful
+              design, and creating solutions that balance functionality,
+              maintainability, and user experience.
+            </p>
           </div>
         </div>
-      </section>
-      <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-          <div class="section__pic-container">
-            <img
-              src="./assets/mabb103u.png"
-              alt="Profile picture"
-              class="about-pic"
-            />
-          </div>
-          <div class="about-details-container">
-            <div class="about-containers">
-              <div class="details-container">
+      </div>
+
+      <img
+        src="./assets/icons/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href = './#experience'"
+      />
+    </section>
+
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
                 <img
-                  src="./assets/experience.png"
+                  src="./assets/icons/checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
-                <h3>Experience</h3>
-                <p>2+ years <br />Frontend Development</p>
-              </div>
-              <div class="details-container">
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+
+              <article>
                 <img
-                  src="./assets/education.png"
-                  alt="Education icon"
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
                   class="icon"
                 />
-                <h3>Education</h3>
-                <p>B.S. Bachelors Degree<br />M.Sc. Masters Degree</p>
-              </div>
-            </div>
-            <div class="text-container">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-                reprehenderit et laborum, rem, dolore eum quod voluptate
-                exercitationem nobis, nihil esse debitis maxime facere minus sint
-                delectus velit in eos quo officiis explicabo deleniti dignissimos.
-                Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-                reiciendis ea magnam? Nulla, impedit fuga!
-              </p>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#experience'"
-        />
-      </section>
-      <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <h2 class="experience-sub-title">Frontend Development</h2>
-              <div class="article-container">
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>HTML</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>CSS</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>SASS</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>JavaScript</h3>
-                    <p>Basic</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>TypeScript</h3>
-                    <p>Basic</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Material UI</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div class="details-container">
-              <h2 class="experience-sub-title">Frontend Development</h2>
-              <div class="article-container">
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>PostgreSQL</h3>
-                    <p>Basic</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Node JS</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Express JS</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article>
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>Git</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#projects'"
-        />
-      </section>
-      <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container color-container">
-              <div class="article-container">
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+
+              <article>
                 <img
-                  src="./assets/project-1.png"
-                  alt="Project 1"
-                  class="project-img"
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
                 />
-              </div>
-              <h2 class="experience-sub-title project-title">Project One</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
                 <img
-                  src="./assets/project-2.png"
-                  alt="Project 2"
-                  class="project-img"
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
                 />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Two</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
-            </div>
-            <div class="details-container color-container">
-              <div class="article-container">
+                <div>
+                  <h3>React</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
                 <img
-                  src="./assets/project-3.png"
-                  alt="Project 3"
-                  class="project-img"
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
                 />
-              </div>
-              <h2 class="experience-sub-title project-title">Project Three</h2>
-              <div class="btn-container">
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Github
-                </button>
-                <button
-                  class="btn btn-color-2 project-btn"
-                  onclick="location.href='https://github.com/'"
-                >
-                  Live Demo
-                </button>
-              </div>
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Responsive Design</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Prisma ORM</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git / GitHub</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+
+              <article>
+                <img
+                  src="./assets/icons/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>REST APIs</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#contact'"
-        />
-      </section>
-      <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-            <img
-              src="./assets/email.png"
-              alt="Email icon"
-              class="icon contact-icon email-icon"
-            />
-            <p><a href="mailto:examplemail@gmail.com">chammonds81@gmail.com</a></p>
+
+        <div class="text-container" style="margin-top: 2rem">
+          <p class="experience-note">
+            My experience combines technical growth in software development with
+            a professional background built on leadership, communication, and
+            coaching. That combination has helped me approach software projects
+            with both technical discipline and a strong focus on usability,
+            collaboration, and continuous improvement.
+          </p>
+        </div>
+      </div>
+
+      <img
+        src="./assets/icons/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href = './#projects'"
+      />
+    </section>
+
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/images/project-1.png"
+                alt="E-commerce project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              E-Commerce Application
+            </h2>
+            <p class="project-description">
+              A full-stack web application focused on product display, user
+              interaction, backend routes, and relational database design using
+              PostgreSQL and Prisma.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="
+                  location.href = 'https://github.com/iAMslim/E.Commerce'
+                "
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-1 project-btn"
+                onclick="location.href = 'capstone.html'"
+              >
+                Capstone Page
+              </button>
+            </div>
           </div>
-          <div class="contact-info-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn icon"
-              class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com">https://www.linkedin.com/in/chammondsjr/</a></p>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/images/project-2.png"
+                alt="Portfolio project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              Professional Portfolio
+            </h2>
+            <p class="project-description">
+              A responsive portfolio site designed to present my background,
+              technical skills, and capstone work in a clean and professional
+              format.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = 'https://github.com/iAMslim'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-1 project-btn"
+                onclick="location.href = 'capstone.html'"
+              >
+                View More
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/images/project-3.png"
+                alt="Capstone project"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">CS 499 Capstone</h2>
+            <p class="project-description">
+              A curated ePortfolio featuring my code review, enhanced artifact,
+              technical narrative, and professional self-assessment aligned with
+              program outcomes.
+            </p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href = 'capstone.html'"
+              >
+                View Portfolio
+              </button>
+              <button
+                class="btn btn-color-1 project-btn"
+                onclick="
+                  location.href = 'https://github.com/iAMslim/E.Commerce'
+                "
+              >
+                Repository
+              </button>
+            </div>
           </div>
         </div>
-      </section>
-      <footer>
-        <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#experience">Experience</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-        <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
-      </footer>
+      </div>
+
+      <img
+        src="./assets/icons/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href = './#contact'"
+      />
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/icons/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:chammonds81@gmail.com">chammonds81@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="contact-info-container">
+          <img
+            src="./assets/icons/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/chammondsjr/" target="_blank">
+              LinkedIn Profile
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="capstone.html">Capstone</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2026 Charles Hammonds. All Rights Reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

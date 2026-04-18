@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CS 499 Capstone ePortfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      body {
+        background: linear-gradient(
+          180deg,
+          #090c0b 0%,
+          #101714 45%,
+          #18211c 100%
+        );
+        color: #f5f5f5;
+      }
+
+      .capstone-page {
+        padding: 4rem 8%;
+      }
+
+      .capstone-intro {
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 3rem auto;
+        background: linear-gradient(135deg, #111814, #1d2822);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 2rem;
+        border: 1px solid rgba(194, 166, 98, 0.2);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+      }
+
+      .capstone-intro p {
+        max-width: 700px;
+        margin: 1rem auto 0 auto;
+        color: #d3dbd5;
+        line-height: 1.7;
+      }
+
+      .capstone-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .capstone-card {
+        background: rgba(18, 24, 20, 0.92);
+        border: 1px solid rgba(194, 166, 98, 0.2);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+        transition: all 0.3s ease;
+      }
+
+      .capstone-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.35);
+      }
+
+      .capstone-card h3 {
+        margin-bottom: 1rem;
+        color: #d6bc81;
+      }
+
+      .capstone-section {
+        margin-top: 4rem;
+      }
+
+      .capstone-section .details-container {
+        margin-top: 1.5rem;
+        background: rgba(18, 24, 20, 0.92);
+        border: 1px solid rgba(194, 166, 98, 0.2);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .capstone-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        justify-content: center;
+      }
+
+      .btn-color-2 {
+        border: 2px solid #c2a662;
+        background: transparent;
+        color: #f5f1e8;
+      }
+
+      .btn-color-2:hover {
+        background: #c2a662;
+        color: #101512;
+        transform: translateY(-2px);
+      }
+
+      .capstone-note {
+        font-style: italic;
+        margin-top: 0.75rem;
+        color: #9ca8a0;
+      }
+
+      .section__text__p1 {
+        color: #c2a662;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+      }
+
+      .title {
+        color: #f5f1e8;
+        font-size: 2.8rem;
+      }
+
+      h2.title {
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Charles Hammonds</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Charles H</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section class="capstone-page">
+      <div class="capstone-intro">
+        <p class="section__text__p1">Computer Science Capstone</p>
+        <h1 class="title">CS 499 ePortfolio</h1>
+        <p>
+          This portfolio highlights my growth throughout the Computer Science
+          program and presents the artifacts, reflection, and technical work
+          that support my transition into software engineering with a focus on
+          full-stack development.
+        </p>
+      </div>
+
+      <div class="capstone-section">
+        <p class="section__text__p1">Overview</p>
+        <h2 class="title">Professional Self-Assessment</h2>
+
+        <div class="details-container">
+          <p>
+            My experience in the Computer Science program helped me build a
+            stronger foundation in software development and prepare for a
+            transition into software engineering with a growing focus on
+            full-stack development. Through coursework, project work, and
+            artifact enhancement, I strengthened my ability to design, build,
+            evaluate, and improve applications using practical tools, structured
+            problem solving, and industry-relevant development practices.
+          </p>
+        </div>
+
+        <div class="capstone-grid">
+          <div class="capstone-card">
+            <h3>Collaboration and Communication</h3>
+            <p>
+              My previous background in coaching and training strengthened my
+              ability to communicate clearly, adapt to different audiences, and
+              explain complex ideas in a way that is easy to understand. These
+              skills transfer directly into software development when working
+              with stakeholders, collaborating with others, and presenting
+              technical decisions professionally.
+            </p>
+          </div>
+
+          <div class="capstone-card">
+            <h3>Algorithms and Problem Solving</h3>
+            <p>
+              Throughout the program, I developed a stronger understanding of
+              data structures, logic, and algorithmic problem solving. This
+              helped me think more critically about efficiency, scalability, and
+              maintainability when building applications and improving existing
+              systems.
+            </p>
+          </div>
+
+          <div class="capstone-card">
+            <h3>Software Engineering and Databases</h3>
+            <p>
+              My work on full-stack applications gave me experience with
+              JavaScript, React, Express, PostgreSQL, and Prisma. These projects
+              strengthened my understanding of application structure, backend
+              logic, relational database design, and how different parts of a
+              system work together to support long-term maintainability.
+            </p>
+          </div>
+
+          <div class="capstone-card">
+            <h3>Security Mindset</h3>
+            <p>
+              The program also helped me become more aware of security
+              considerations in software development, including authentication,
+              input validation, backend protection, and data integrity. While my
+              work is still growing, I have developed a stronger habit of
+              thinking about how systems can fail and how design decisions can
+              reduce risk.
+            </p>
+          </div>
+        </div>
+
+        <div class="details-container" style="margin-top: 2rem">
+          <h3>How the Artifacts Fit Together</h3>
+          <p>
+            The artifacts in this ePortfolio represent my development across
+            multiple areas of computer science. The code review demonstrates my
+            ability to evaluate an existing system, identify weaknesses, and
+            plan targeted improvements. The enhanced artifact demonstrates my
+            ability to apply technical knowledge, strengthen database design,
+            and produce a more structured, scalable solution that better
+            supports real-world application behavior.
+          </p>
+        </div>
+        <div class="details-container" style="margin-top: 2rem">
+          <h3>Course Outcome Alignment</h3>
+          <p>
+            This enhancement reflects my ability to design and evaluate
+            computing solutions by restructuring the database to solve real data
+            modeling issues in an e-commerce system. It also demonstrates my use
+            of industry-standard tools and practices through PostgreSQL and
+            Prisma ORM, my ability to explain technical decisions clearly, and a
+            developing security mindset through stronger data integrity and more
+            reliable relational structure.
+          </p>
+        </div>
+      </div>
+
+      <div class="capstone-section">
+        <p class="section__text__p1">Project Analysis</p>
+        <h2 class="title">Code Review</h2>
+
+        <div class="details-container">
+          <p>
+            This code review provides a structured walkthrough of my e-commerce
+            application prior to enhancement. It identifies key weaknesses in
+            the original implementation, explains the reasoning behind
+            improvement decisions, and outlines how those changes were applied
+            to strengthen the system across design, database structure, and
+            maintainability.
+          </p>
+
+          <div class="capstone-links">
+            <a
+              href="https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2F2ED96DA324DBBC3D%21s997b8e95e4f84f259f9524334f8d37ff%3Fithint%3Dvideo%26e%3Dfu7Uoy%26migratedtospo%3Dtrue&cid=2ED96DA324DBBC3D&id=2ED96DA324DBBC3D%21s997b8e95e4f84f259f9524334f8d37ff&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy8yZWQ5NmRhMzI0ZGJiYzNkL0lRQ1ZqbnVaLU9RbFQ1LVZKRE5QalRmX0FXNXRlVG0zNmhpUVRzRzh0OXRKaE1VP2U9ZnU3VW95&v=photos"
+              target="_blank"
+              class="btn btn-color-2"
+            >
+              View Code Review Video
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="capstone-section">
+        <p class="section__text__p1">Technical Enhancement</p>
+        <h2 class="title">Database Artifact</h2>
+
+        <div class="details-container">
+          <p>
+            This artifact presents the database enhancement for my full-stack
+            e-commerce application built with PostgreSQL and Prisma ORM. The
+            application manages users, books, carts, and orders, and the
+            enhancement focused on improving the cart-related schema to better
+            support relational integrity, normalization, and long-term
+            scalability.
+          </p>
+
+          <p>
+            In the original design, cart relationships were inconsistent and
+            incomplete. The schema attempted to associate books directly with
+            carts while also using an outdated
+            <strong>ProductInCart</strong> structure that did not properly align
+            with the existing <strong>Book</strong> model. To correct this, I
+            redesigned the cart system around a
+            <strong>BookInCart</strong> junction table that connects
+            <strong>Cart</strong> and <strong>Book</strong> through foreign keys
+            and stores item quantity. This created a proper many-to-many
+            relationship, removed redundant direct relationships, improved
+            naming consistency, and produced a cleaner, more scalable database
+            design.
+          </p>
+
+          <p>
+            These improvements directly enhanced application functionality by
+            enabling more accurate cart operations, simplifying backend logic,
+            and improving the consistency of database queries within Prisma.
+          </p>
+
+          <div class="capstone-links">
+            <a
+              href="assets/docs/Database_Artifact_Narrative.docx"
+              target="_blank"
+              class="btn btn-color-2"
+            >
+              Download Database Narrative
+            </a>
+
+            <a
+              href="https://github.com/iAMslim/E.Commerce"
+              target="_blank"
+              class="btn btn-color-2"
+            >
+              View Project Repository
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2026 Charles Hammonds. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
