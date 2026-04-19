@@ -156,27 +156,28 @@
         <p class="section__text__p1">Computer Science Capstone</p>
         <h1 class="title">CS 499 ePortfolio</h1>
         <p>
-          This portfolio highlights my growth throughout the Computer Science
-          program and presents the artifacts, reflection, and technical work
-          that support my transition into software engineering with a focus on
-          full-stack development.
+         This ePortfolio demonstrates my progression as a software engineer through the development and enhancement of a full-stack application. It highlights my ability to analyze, improve, and deliver scalable solutions using modern development tools and practices.
         </p>
+
+          <div class="capstone-links" style="margin-top: 1.5rem;">
+           <a href="#self-assessment" class="btn btn-color-2">Self-Assessment</a>
+           <a href="#code-review" class="btn btn-color-2">Code Review</a>
+            <a href="#artifact-breakdown" class="btn btn-color-2">Enhancements</a>
+         </div>
       </div>
 
-      <div class="capstone-section">
+      <div class="capstone-section" id="self-assessment">
         <p class="section__text__p1">Overview</p>
         <h2 class="title">Professional Self-Assessment</h2>
 
         <div class="details-container">
           <p>
-            My experience in the Computer Science program helped me build a
-            stronger foundation in software development and prepare for a
-            transition into software engineering with a growing focus on
-            full-stack development. Through coursework, project work, and
-            artifact enhancement, I strengthened my ability to design, build,
-            evaluate, and improve applications using practical tools, structured
-            problem solving, and industry-relevant development practices.
+           Through my Computer Science coursework and project development, I built a strong foundation in software engineering with a focus on designing, improving, and maintaining full-stack applications.
           </p>
+
+          <p class="capstone-note">
+  This ePortfolio uses a single full-stack e-commerce application enhanced across software design and engineering, algorithms and data structures, and databases.
+</p>
         </div>
 
         <div class="capstone-grid">
@@ -196,10 +197,7 @@
             <h3>Algorithms and Problem Solving</h3>
             <p>
               Throughout the program, I developed a stronger understanding of
-              data structures, logic, and algorithmic problem solving. This
-              helped me think more critically about efficiency, scalability, and
-              maintainability when building applications and improving existing
-              systems.
+              data structures, logic, and algorithmic problem solving. This strengthened my ability to design efficient and scalable solutions, manage data flow, and ensure consistent system behavior across application layers.
             </p>
           </div>
 
@@ -207,10 +205,7 @@
             <h3>Software Engineering and Databases</h3>
             <p>
               My work on full-stack applications gave me experience with
-              JavaScript, React, Express, PostgreSQL, and Prisma. These projects
-              strengthened my understanding of application structure, backend
-              logic, relational database design, and how different parts of a
-              system work together to support long-term maintainability.
+              JavaScript, React, Express, PostgreSQL, and Prisma. These projects strengthened my ability to design structured application architectures, manage backend logic, and implement reliable relational database systems.
             </p>
           </div>
 
@@ -253,18 +248,14 @@
         </div>
       </div>
 
-      <div class="capstone-section">
+      <div class="capstone-section" id="code-review">
         <p class="section__text__p1">Project Analysis</p>
         <h2 class="title">Code Review</h2>
 
         <div class="details-container">
           <p>
             This code review provides a structured walkthrough of my e-commerce
-            application prior to enhancement. It identifies key weaknesses in
-            the original implementation, explains the reasoning behind
-            improvement decisions, and outlines how those changes were applied
-            to strengthen the system across design, database structure, and
-            maintainability.
+            application prior to enhancement. It identifies structural weaknesses in the original implementation and outlines targeted improvements that enhance system reliability, maintainability, and scalability.
           </p>
 
           <div class="capstone-links">
@@ -279,61 +270,74 @@
         </div>
       </div>
 
-      <div class="capstone-section">
-        <p class="section__text__p1">Technical Enhancement</p>
-        <h2 class="title">Database Artifact</h2>
+      <div class="capstone-section" id="artifact-breakdown">
+  <p class="section__text__p1">Artifact Breakdown</p>
+  <h2 class="title">Artifact Enhancement Categories</h2>
 
-        <div class="details-container">
-          <p>
-            This artifact presents the database enhancement for my full-stack
-            e-commerce application built with PostgreSQL and Prisma ORM. The
-            application manages users, books, carts, and orders, and the
-            enhancement focused on improving the cart-related schema to better
-            support relational integrity, normalization, and long-term
-            scalability.
-          </p>
+  <div class="capstone-grid">
 
-          <p>
-            In the original design, cart relationships were inconsistent and
-            incomplete. The schema attempted to associate books directly with
-            carts while also using an outdated
-            <strong>ProductInCart</strong> structure that did not properly align
-            with the existing <strong>Book</strong> model. To correct this, I
-            redesigned the cart system around a
-            <strong>BookInCart</strong> junction table that connects
-            <strong>Cart</strong> and <strong>Book</strong> through foreign keys
-            and stores item quantity. This created a proper many-to-many
-            relationship, removed redundant direct relationships, improved
-            naming consistency, and produced a cleaner, more scalable database
-            design.
-          </p>
+    <!-- SOFTWARE ENGINEERING -->
+    <div class="capstone-card">
+      <h3>Software Design and Engineering</h3>
+      <p>
+       This enhancement focused on improving system architecture, backend routing, and authentication flow. Fixes to token handling, cart API behavior, and UI consistency improved overall system reliability, maintainability, and user experience.
+      </p>
 
-          <p>
-            These improvements directly enhanced application functionality by
-            enabling more accurate cart operations, simplifying backend logic,
-            and improving the consistency of database queries within Prisma.
-          </p>
-
-          <div class="capstone-links">
-            <a
-              href="assets/docs/Database_Artifact_Narrative.docx"
-              target="_blank"
-              class="btn btn-color-2"
-            >
-              Download Database Narrative
-            </a>
-
-            <a
-              href="https://github.com/iAMslim/E.Commerce"
-              target="_blank"
-              class="btn btn-color-2"
-            >
-              View Project Repository
-            </a>
-          </div>
-        </div>
+      <div class="capstone-links">
+        <a href="assets/docs/original_artifact.zip" target="_blank" class="btn btn-color-2">
+          Download Original Artifact
+        </a>
+        <a href="https://github.com/iAMslim/E.Commerce" target="_blank" class="btn btn-color-2">
+          View Enhanced Repository
+        </a>
+        <a href="assets/docs/CS499_Milestone2.docx" target="_blank" class="btn btn-color-2">
+          Narrative
+        </a>
       </div>
-    </section>
+    </div>
+
+    <!-- ALGORITHMS -->
+    <div class="capstone-card">
+      <h3>Algorithms and Data Structures</h3>
+      <p>
+       This enhancement focused on improving data consistency, application logic, and API reliability. Refinements to cart operations ensured accurate data synchronization between frontend state and backend systems, improving overall system correctness and efficiency.
+      </p>
+
+      <div class="capstone-links">
+        <a href="assets/docs/original_artifact.zip" target="_blank" class="btn btn-color-2">
+          Download Original Artifact
+        </a>
+        <a href="https://github.com/iAMslim/E.Commerce" target="_blank" class="btn btn-color-2">
+          View Enhanced Repository
+        </a>
+        <a href="assets/docs/CS499_milestone3.docx" target="_blank" class="btn btn-color-2">
+          Narrative
+        </a>
+      </div>
+    </div>
+
+    <!-- DATABASE -->
+    <div class="capstone-card">
+      <h3>Database Enhancement</h3>
+      <p>
+       The improvements strengthened data integrity, eliminated redundancy, and created a scalable relational structure better suited for real-world application behavior.
+      </p>
+
+      <div class="capstone-links">
+        <a href="assets/docs/original_artifact.zip" target="_blank" class="btn btn-color-2">
+          Download Original Artifact
+        </a>
+        <a href="https://github.com/iAMslim/E.Commerce" target="_blank" class="btn btn-color-2">
+          View Enhanced Repository
+        </a>
+        <a href="assets/docs/Database_Artifact_Narrative.docx" target="_blank" class="btn btn-color-2">
+          Narrative
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
 
     <footer>
       <nav>

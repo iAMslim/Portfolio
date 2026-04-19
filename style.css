@@ -353,6 +353,11 @@ section {
   padding: 1rem 1.25rem;
   min-width: 8rem;
   border-radius: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-color-1,
