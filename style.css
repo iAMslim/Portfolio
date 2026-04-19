@@ -616,10 +616,43 @@ article .icon {
 /* FOOTER SECTION */
 
 footer {
-  height: 26vh;
+  height: auto;
   margin: 0 1rem;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  margin: 0;
+}
+
+footer .nav-links-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+footer .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 footer p {
+  margin: 0;
   text-align: center;
+  line-height: 1.5;
 }

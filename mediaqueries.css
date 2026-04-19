@@ -200,26 +200,29 @@
   }
 
   footer {
+    height: auto;
     margin: 0 1rem;
-    padding-bottom: 2rem;
+    padding: 2rem 0;
   }
 
   footer nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  footer .nav-links-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   footer .nav-links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    text-align: center;
-    width: 100%;
-    padding-left: 0;
-  }
+  flex-direction: column;
+  gap: 0.75rem;
+}
 
   footer .nav-links li {
     list-style: none;
