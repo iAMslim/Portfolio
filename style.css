@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 /* GENERAL */
 
@@ -8,8 +9,19 @@
   box-sizing: border-box;
 }
 
+body,
+p,
+li,
+a,
+button,
+input,
+textarea {
+  font-family: "Inter", sans-serif;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
 html {
@@ -37,10 +49,24 @@ p {
 }
 /* ===== TYPOGRAPHY UPGRADE ===== */
 
+.title,
+.section-title,
+.project-title,
+.logo,
+h1,
+h2,
+h3,
+nav a {
+  font-family: "Space Grotesk", sans-serif;
+}
+
 .title {
-  font-size: 3.4rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 4rem;
   font-weight: 700;
-  letter-spacing: 0.02rem;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  text-align: center;
 }
 
 .section__text__p1 {
@@ -104,6 +130,9 @@ nav {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -237,11 +266,39 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
+  position: relative;
+  padding: 7rem 0;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(194, 166, 98, 0.22),
+    transparent
+  );
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(194, 166, 98, 0.04),
+    transparent 55%
+  );
+  pointer-events: none;
 }
 
 .section-container {
@@ -295,11 +352,6 @@ section {
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
-}
-
-.title {
-  font-size: 3rem;
-  text-align: center;
 }
 
 #socials-container {
@@ -481,6 +533,7 @@ article .icon {
 
 .color-container {
   position: relative;
+  transform-style: preserve-3d;
   background: linear-gradient(
     180deg,
     rgba(20, 26, 22, 0.96),
@@ -513,9 +566,11 @@ article .icon {
 }
 
 .color-container:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 22px 46px rgba(0, 0, 0, 0.32);
-  border-color: rgba(194, 166, 98, 0.38);
+  transform: translateY(-10px) rotateX(2deg) rotateY(-2deg) scale(1.015);
+
+  box-shadow: 0 28px 54px rgba(0, 0, 0, 0.38);
+
+  border-color: rgba(194, 166, 98, 0.42);
 }
 
 .color-container:hover::before {
@@ -543,10 +598,12 @@ article .icon {
 }
 
 .project-title {
-  margin: 1.25rem 0 0.75rem 0;
+  margin: 1.5rem 0 1rem 0;
   color: #d6bc81;
-  font-size: 1.55rem;
+  font-size: 1.65rem;
+  font-weight: 600;
   text-align: center;
+  line-height: 1.2;
 }
 
 .project-description {
@@ -564,7 +621,7 @@ article .icon {
 }
 
 #projects .btn-container {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -655,4 +712,90 @@ footer p {
   margin: 0;
   text-align: center;
   line-height: 1.5;
+}
+
+.scrolled-nav {
+  background: rgba(10, 14, 12, 0.96) !important;
+  border-color: rgba(194, 166, 98, 0.35) !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35) !important;
+  transform: translateY(-2px);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -20%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+
+  background: radial-gradient(
+    circle,
+    rgba(194, 166, 98, 0.08),
+    transparent 70%
+  );
+
+  filter: blur(80px);
+
+  animation: ambientFloat 14s ease-in-out infinite alternate;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -20%;
+  right: -10%;
+  width: 450px;
+  height: 450px;
+
+  background: radial-gradient(
+    circle,
+    rgba(120, 180, 160, 0.06),
+    transparent 70%
+  );
+
+  filter: blur(90px);
+
+  animation: ambientFloatTwo 18s ease-in-out infinite alternate;
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes ambientFloat {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(80px, 40px);
+  }
+}
+
+@keyframes ambientFloatTwo {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-60px, -50px);
+  }
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #c2a662, #f5f1e8);
+  z-index: 2000;
 }
